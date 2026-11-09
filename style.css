@@ -1,0 +1,105 @@
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: #f1f5f9;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+}
+header {
+    background: linear-gradient(120deg, #12345a, #1769aa);
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+}
+header h1 { margin: 0 0 10px; }
+header p { margin: 0; }
+main {
+    max-width: 1050px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px #0000000d;
+}
+.card h2 { color: #173b68; margin-top: 0; }
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+    margin-top: 20px;
+}
+.field { display: flex; flex-direction: column; gap: 7px; }
+label { font-weight: bold; font-size: 14px; }
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: white;
+    font-size: 15px;
+}
+button, .download {
+    background: #1769aa;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 15px;
+}
+button:hover, .download:hover { background: #104c80; }
+.result {
+    margin-top: 22px;
+    padding: 22px;
+    border-radius: 10px;
+    text-align: center;
+}
+.result.yes { background: #dcfce7; color: #166534; }
+.result.no { background: #fee2e2; color: #991b1b; }
+.hidden { display: none; }
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.metric {
+    background: #eff6ff;
+    padding: 18px 8px;
+    text-align: center;
+    border-radius: 9px;
+}
+.metric strong { display: block; font-size: 23px; color: #1769aa; }
+.metric span { font-size: 13px; }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    text-align: center;
+}
+th, td { border: 1px solid #cbd5e1; padding: 12px; }
+th { background: #eaf2fb; }
+.feature {
+    margin: 12px 0;
+    font-size: 14px;
+}
+.bar {
+    height: 10px;
+    background: #1769aa;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+.small { color: #64748b; font-size: 13px; }
+footer { text-align: center; padding: 25px; color: #64748b; }
+@media(max-width: 650px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .metric-grid { grid-template-columns: repeat(2, 1fr); }
+    .card { padding: 18px; }
+}

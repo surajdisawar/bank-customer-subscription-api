@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bank Customer Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <h1>Bank Customer Prediction</h1>
+    <p>Machine Learning Based Subscription Prediction</p>
+</header>
+
+<main>
+<section class="card">
+    <h2>Customer Details</h2>
+    <p>Enter customer information to predict term deposit subscription.</p>
+    <form id="predictionForm">
+        <div id="formFields" class="form-grid"></div>
+        <button type="submit" id="predictBtn">Predict Subscription</button>
+    </form>
+    <div id="result" class="result hidden"></div>
+</section>
+
+<section class="card">
+    <h2>Model Performance</h2>
+    <div id="metrics" class="metric-grid">Loading metrics...</div>
+    <h3>Confusion Matrix</h3>
+    <p class="small">Rows = Actual values, Columns = Predicted values</p>
+    <div id="matrix"></div>
+    <h3>Top Important Features</h3>
+    <div id="features"></div>
+</section>
+
+<section class="card">
+    <h2>Prediction History</h2>
+    <button type="button" onclick="loadHistory()">Refresh History</button>
+    <a class="download" href="/download-history">Download History CSV</a>
+    <div id="history"></div>
+</section>
+</main>
+
+<footer>Bank Customer Subscription Prediction | Random Forest Classifier</footer>
+<script src="/static/script.js"></script>
+</body>
+</html>
